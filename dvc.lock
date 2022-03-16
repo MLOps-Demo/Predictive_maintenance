@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  Training:
+    cmd: python predictive_maintenance.py
+    deps:
+    - path: Data/predictive_maintenance.csv
+      md5: 3e6cab8ef847cc7617c7e0aa14059757
+      size: 531014
+    - path: predictive_maintenance.py
+      md5: 4224595deb7dd1935a1a46ced1370346
+      size: 3527
+    outs:
+    - path: Confusion_matrix.png
+      md5: 4275373203b20cc006b7a761bb6ae4fe
+      size: 16428
+    - path: Machine_type.png
+      md5: 6bc00fab1f8a190c4284b94a0955e6b3
+      size: 15356
+    - path: Output/Accuracy.json
+      md5: 415c3878cc64998b2a6b86662691bebd
+      size: 184
+    - path: machine_histogram.png
+      md5: 71c103e2dc39ba495c6d3884c41f3e83
+      size: 71929

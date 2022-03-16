@@ -1,0 +1,30 @@
+stages:
+  
+  Training:
+    cmd: python predictive_maintenance.py
+    
+    deps:
+      - predictive_maintenance.py
+      - Data/predictive_maintenance.csv
+    
+  
+    metrics:   
+
+      - Output/Accuracy.json:
+          cache: false
+
+  
+
+
+
+    plots:    
+
+      - machine_histogram.png:
+          cache: false
+
+      - Machine_type.png:
+          cache: false
+          
+      - Confusion_matrix.png:
+          cache: false
+
